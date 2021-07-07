@@ -1,51 +1,5 @@
 #include <stdio.h>
 
-void Triangle_Identify(double a,double b,double c)
-{
-    double temp;      
-
-    if(a<b){//完成a和b值的交换,a里面放最大值
-        temp=a;a=b;b=temp;
-    }
-    if(a<c){//完成a和c值的交换,a里面放最大值
-        temp=a;a=c;c=temp;
-    }
-    if(b<c){//完成b和c值的交换,a里面放最大值
-        temp=b;b=c;c=temp;
-    }
-    if((a*a)<(b*b+c*c)){     //若最大边平方小于另外两边平方和，则该三角形为锐角三角形
-        if((a==b)&&(a==c)&&(b==c))
-        {
-            printf("该三角形为等边三角形！！！\n");
-        }
-        else if((a==b)||(a==c)||(b==c))
-        {
-            printf("该三角形为等腰锐角三角形！！！\n");
-        }
-        else
-        {
-             printf("该三角形为锐角三角形！！！\n");
-        }  
-    }
-    if((a*a)==(b*b+c*c)){     //若最大边平方小于另外两边平方和，则该三角形为锐角三角形
-        if((a==b)||(a==c)||(b==c)){
-            printf("该三角形为等腰直角三角形！！！\n");
-        }else{
-            printf("该三角形为直角三角形！！！\n");
-        }
-    }
-    if((a*a)>(b*b+c*c)){     //若最大边平方小于另外两边平方和，则该三角形为锐角三角形
-        if((a==b)||(a==c)||(b==c))
-        {
-            printf("该三角形为等腰钝角三角形！！！\n");
-        }
-        else
-        {
-            printf("该三角形为钝角三角形！！！\n");
-        }
-        
-    }
-}
 
 int main()
 {
